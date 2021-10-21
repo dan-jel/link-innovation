@@ -1,32 +1,40 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <Nav />
     </div>
+
     <router-view />
   </div>
 </template>
+<style>
+@import "./styles/bootstrap.min.css";
+</style>
 
-<style lang="scss">
+<style>
+@import "./styles/owl.theme.default.min.css";
+</style>
+<style>
+@import "./styles/style.css";
+</style>
+<style lang="css">
+* {
+  margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-family: "Work Sans", sans-serif;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
+
+<script>
+import Nav from "@/components/Nav.vue";
+
+export default {
+  name: "App",
+  components: {
+    Nav,
+  },
+};
+</script>
